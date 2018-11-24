@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/0c194970-f538-47a1-8311-b442d6c54a09/resourceGroups/spyros-recipebook/providers/Microsoft.Web/sites/amdocs-hackathon-admin",
+    "appService.deploySubpath": "dist\\amdocs-hackathon-admin"
+}
