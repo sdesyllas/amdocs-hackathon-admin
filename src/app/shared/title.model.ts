@@ -1,10 +1,10 @@
 export class Title {
     constructor(
-        public name: string, 
-        public description:  string,
+        public titleSort: string, 
+        public summaryLong:  string,
         public year: string,
-        public thumbnail: string,
-        public boxcover: string
+        public thumbnail: string[],
+        public boxCover: string[]
         ) {
    }
 }

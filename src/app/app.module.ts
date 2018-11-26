@@ -7,6 +7,8 @@ import { TitlesComponent } from './titles/titles.component';
 import { TitleListComponent } from './titles/title-list/title-list.component';
 import { TitleItemComponent } from './titles/title-list/title-item/title-item.component';
 import { TitleDetailComponent } from './titles/title-detail/title-detail.component';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -18,7 +20,8 @@ import { TitleDetailComponent } from './titles/title-detail/title-detail.compone
     TitleDetailComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

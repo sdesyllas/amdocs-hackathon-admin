@@ -1,8 +1,8 @@
 <a href="#" class="list-group-item list-group-item-action flex-column align-items-start movie-item">
   <div class="d-flex w-100 justify-content-between">
-    <h4 class="list-group-item-heading">{{ title.name }}</h4>
+    <h4 class="list-group-item-heading">{{ title.titleSort }}</h4>
     <small>{{ title.year }}</small>
   </div>
-  <p class="mb-1">{{ title.description }}</p>
-  <img [src]="title.boxcover" alt="{{ title.name }}" class="img-responsive" style="max-height: 150px;">
+  <p class="mb-1">{{ title.summaryLong }}</p>
+  <img [src]="title.boxCover[0]" alt="{{ title.titleSort }}" class="img-responsive" style="max-height: 150px;">
 </a>
