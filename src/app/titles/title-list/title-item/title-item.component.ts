@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Title } from '../../../shared/title.model';
 
 @Component({
@@ -8,9 +8,15 @@ import { Title } from '../../../shared/title.model';
 })
 export class TitleItemComponent implements OnInit {
   @Input() title: Title;
+  @Output() onTitleSelected = new EventEmitter<Title>();
+  @Input() anchorItem: string;
+
   constructor() { }
 
   ngOnInit() {
   }
 
+  selectTitle() {
+    this.onTitleSelected.emit(this.title);
+  }
 }

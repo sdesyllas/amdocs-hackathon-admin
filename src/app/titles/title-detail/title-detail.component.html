@@ -1,3 +1,12 @@
-<p>
-  title-detail works!
-</p>
+<div *ngIf="showTitleDetails" class="card sticky-top">
+    <a class="list-group-item list-group-item-action flex-column align-items-start movie-item">
+        <div class="d-flex w-100 justify-content-between">
+          <h4 class="list-group-item-heading">{{ title.titleSort }}</h4> 
+          <small><a (click)="playMovie()" target="_blank"><img src="http://cdn.onlinewebfonts.com/svg/img_404212.png" class="play-image"></a></small>
+          <small>{{ title.year }}</small>
+          
+        </div>
+        <p class="mb-1">{{ title.summaryLong }}</p>
+        <img [src]="title.boxCover[0]" alt="{{ title.titleSort }}" class="img-responsive title-image">
+       </a>
+</div>

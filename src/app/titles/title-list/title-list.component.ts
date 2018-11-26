@@ -9,6 +9,7 @@ import { Title } from '../../shared/title.model';
 })
 export class TitleListComponent implements OnInit {
   titles: Title[];
+  selectedTitle: Title;
 
   constructor(private titlesService: TitlesService) { 
 
@@ -21,5 +22,10 @@ export class TitleListComponent implements OnInit {
 
   ngOnInit() {
     this.getHeroes();
+  }
+
+  onTitleSelected(title: Title) {
+    console.log(title.titleSort);
+    this.selectedTitle = title;
   }
 }

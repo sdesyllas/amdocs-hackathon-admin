@@ -4,7 +4,9 @@ export class Title {
         public summaryLong:  string,
         public year: string,
         public thumbnail: string[],
-        public boxCover: string[]
+        public boxCover: string[],
+        public movie: string,
+        public offer: string[]
         ) {
    }
 }

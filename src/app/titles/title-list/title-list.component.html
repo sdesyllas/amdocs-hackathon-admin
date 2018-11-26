@@ -11,7 +11,7 @@
 <div class="row">
   <div class="col-xs-12">
     <div class="list-group">
-       <app-title-item *ngFor="let title of titles" [title]="title"></app-title-item>
+       <app-title-item *ngFor="let title of titles; let i = index" [title]="title" [anchorItem]="i" (onTitleSelected)="onTitleSelected($event)"></app-title-item>
     </div>
   </div>
 </div>
