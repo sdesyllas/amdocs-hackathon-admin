@@ -1,0 +1,17 @@
+
+<div class="row">
+  <div class="col-xs-12">
+    <p></p>
+      <div class="btn-group" role="group" aria-label="Basic example">
+          <button class="btn btn-secondary btn-success">New Title</button>
+      </div>
+  </div>
+</div>
+<hr/>
+<div class="row">
+  <div class="col-xs-12">
+    <div class="list-group">
+       <app-title-item *ngFor="let title of titles" [title]="title"></app-title-item>
+    </div>
+  </div>
+</div>
