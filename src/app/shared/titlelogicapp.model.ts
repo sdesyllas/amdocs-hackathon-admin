@@ -6,6 +6,9 @@ export class TitleLogicAppModel {
         public languages: string[],
         public thumbnail: string,
         public boxCover: string,
+        public purchasePrice: number,
+        public rentalPrice: number,
+        public uriId: string
         ) {
    }
 }

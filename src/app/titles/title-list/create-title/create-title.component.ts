@@ -12,7 +12,7 @@ export class CreateTitleComponent implements OnInit {
   titleLogicAppModel: TitleLogicAppModel;
   private ccImageService: string = 'https://az-ccimage-api-s001.azureedge.net/api/image?i=';
   constructor(private logicAppService: LogicAppService) {
-    this.titleLogicAppModel = new TitleLogicAppModel("", "", "", [], "", "")
+    this.titleLogicAppModel = new TitleLogicAppModel("", "", "", [], "", "", 0.00, 0.00, "")
    }
 
   ngOnInit() {

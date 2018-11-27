@@ -15,7 +15,10 @@ export class Title {
         public boxCover_gr: string[],
         public movie: string,
         public offer: string[],
-        public resolution: string
+        public resolution: string,
+        public purchasePrice: number,
+        public rentalPrice: number,
+        public uriId: string
         ) {
    }
 }
