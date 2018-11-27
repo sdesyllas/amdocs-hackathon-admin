@@ -12,14 +12,20 @@ export class TitleDetailComponent implements OnInit {
   @Input() title: Title;
   @Input() showTitleDetails = false;
   resolveItem: ResolveItem;
-  
+  @Input() language: string;
+
   constructor(private resolveService: ResolveService) { }
 
   ngOnInit() {
+    this.language = "en";
   } 
 
   playMovie(): void {
     this.getResolve();
+  }
+
+  onLanguageChange(): void {
+
   }
 
   getResolve(): void {

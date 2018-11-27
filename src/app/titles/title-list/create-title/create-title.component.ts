@@ -10,9 +10,9 @@ import { LogicAppService } from '../../../shared/logicapp.service';
 export class CreateTitleComponent implements OnInit {
 
   titleLogicAppModel: TitleLogicAppModel;
-
+  private ccImageService: string = 'https://az-ccimage-api-s001.azureedge.net/api/image?i=';
   constructor(private logicAppService: LogicAppService) {
-    this.titleLogicAppModel = new TitleLogicAppModel("", "", "", [])
+    this.titleLogicAppModel = new TitleLogicAppModel("", "", "", [], "", "")
    }
 
   ngOnInit() {
@@ -26,6 +26,8 @@ export class CreateTitleComponent implements OnInit {
   }
 
   postTitle(title: TitleLogicAppModel): void {
+    this.titleLogicAppModel.thumbnail = this.ccImageService+this.titleLogicAppModel.thumbnail;
+    this.titleLogicAppModel.boxCover = this.ccImageService+this.titleLogicAppModel.boxCover;
     this.logicAppService.postTitle(this.titleLogicAppModel)
       .subscribe(data => this.submitted = true);
   }

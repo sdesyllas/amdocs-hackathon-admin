@@ -11,6 +11,7 @@ export class TitleListComponent implements OnInit {
   titles: Title[];
   selectedTitle: Title;
   showCreateTitle: boolean;
+  languageReset: string;
 
   constructor(private titlesService: TitlesService) { 
 
@@ -30,7 +31,8 @@ export class TitleListComponent implements OnInit {
   }
 
   onTitleSelected(title: Title) {
-    console.log(title.titleSort);
+    this.languageReset = "en";
+    console.log(title.titleSort + ' ' + this.languageReset);
     this.selectedTitle = title;
   }
 }
