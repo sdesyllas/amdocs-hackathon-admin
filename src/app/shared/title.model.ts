@@ -6,7 +6,8 @@ export class Title {
         public thumbnail: string[],
         public boxCover: string[],
         public movie: string,
-        public offer: string[]
+        public offer: string[],
+        public resolution: string
         ) {
    }
 }

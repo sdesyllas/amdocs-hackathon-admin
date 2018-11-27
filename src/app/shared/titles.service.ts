@@ -15,4 +15,5 @@ export class TitlesService {
   getTitles (): Observable<Title[]> {
     return this.http.get<Title[]>('https://ccsearch-q003.azureedge.net/indexes/0000d-movie-index/docs?api-version=2017-11-11&api-key=9454520FF92761E7FAABADB84FFBD150');
   }
+  
 }

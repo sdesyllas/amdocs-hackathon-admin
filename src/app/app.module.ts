@@ -8,6 +8,8 @@ import { TitleListComponent } from './titles/title-list/title-list.component';
 import { TitleItemComponent } from './titles/title-list/title-item/title-item.component';
 import { TitleDetailComponent } from './titles/title-detail/title-detail.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule }   from '@angular/forms';
+import { CreateTitleComponent } from './titles/title-list/create-title/create-title.component';
 
 
 @NgModule({
@@ -17,10 +19,12 @@ import { HttpClientModule } from '@angular/common/http';
     TitlesComponent,
     TitleListComponent,
     TitleItemComponent,
-    TitleDetailComponent
+    TitleDetailComponent,
+    CreateTitleComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     HttpClientModule
   ],
   providers: [],

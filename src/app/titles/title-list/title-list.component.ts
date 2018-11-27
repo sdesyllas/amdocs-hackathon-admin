@@ -10,9 +10,14 @@ import { Title } from '../../shared/title.model';
 export class TitleListComponent implements OnInit {
   titles: Title[];
   selectedTitle: Title;
+  showCreateTitle: boolean;
 
   constructor(private titlesService: TitlesService) { 
 
+  }
+
+  showCreateForm(){
+    this.showCreateTitle = true;
   }
 
   getHeroes(): void {

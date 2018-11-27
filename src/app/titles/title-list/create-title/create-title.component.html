@@ -1,0 +1,35 @@
+<form (ngSubmit)="onSubmit()" #titleCreationForm="ngForm" *ngIf="!submitted">
+  <div class="form-group">
+    <label for="titleSortInput">Title</label>
+    <input type="text" class="form-control" id="titleSortInput" aria-describedby="titleHelp" placeholder="Enter title"
+    [(ngModel)]="titleLogicAppModel.titleSort" name="titleSort" required>
+    <small id="titleHelp" class="form-text text-muted">Title of the movie.</small>
+  </div>
+  <div class="form-group">
+    <label for="summaryInput">Summary</label>
+    <input type="text" class="form-control" id="summaryInput" aria-describedby="summaryHelp" placeholder="Enter summary"
+    [(ngModel)]="titleLogicAppModel.summaryLong" name="summaryLong" required>
+    <small id="summaryHelp" class="form-text text-muted">Summary of the movie.</small>
+  </div>
+  <div class="form-group">
+    <label for="yearInput">Year</label>
+    <input type="number" class="form-control" id="yearInput" aria-describedby="yearHelp" placeholder="Enter year of production"
+    [(ngModel)]="titleLogicAppModel.year" name="year" required>
+    <small id="summaryHelp" class="form-text text-muted">Year of production.</small>
+  </div>
+  <div class="form-group">
+    <label for="languagesSelect">Add languages</label>
+    <select multiple class="form-control" id="languagesSelect"
+    [(ngModel)]="titleLogicAppModel.languages" name="languages" required>
+      <option>en</option>
+      <option>it</option>
+      <option>gr</option>
+    </select>
+  </div>
+ 
+  <button type="submit" class="btn btn-primary" [disabled]="!titleCreationForm.form.valid">Create flow!</button>
+</form>
+<div class="alert alert-success" role="alert" *ngIf="submitted">
+  title {{ titleLogicAppModel.titleSort }} created! <br/>
+  Logic app in Azure started, please sit back and relax :)
+</div>
