@@ -1,45 +1,59 @@
 <form (ngSubmit)="onSubmit()" #titleCreationForm="ngForm" *ngIf="!submitted">
+  <div class="form-row">
+    <div class="form-group col-md-4">
+      <div class="form-group">
+        <label for="idInput">Id</label>
+        <input type="text" class="form-control" id="idInput" aria-describedby="idHelp" placeholder="Enter Id"
+          [(ngModel)]="titleLogicAppModel.uriId" name="uriId" required>
+        <small id="idHelp" class="form-text text-muted">Id of the movie.</small>
+      </div>
+    </div>
+    <div class="form-group col-md-4">
+      <div class="form-group">
+        <label for="purchasePriceInput">Purchase Price</label>
+        <input type="number" class="form-control" id="purchasePriceInput" aria-describedby="purchasePriceHelp"
+          placeholder="Enter purchase price" [(ngModel)]="titleLogicAppModel.purchasePrice" name="purchasePrice"
+          required>
+        <small id="purchasePriceHelp" class="form-text text-muted">Purchase price of the movie.</small>
+      </div>
+    </div>
+    <div class="form-group col-md-4">
+      <div class="form-group">
+        <label for="rentalPriceInput">Rental Price</label>
+        <input type="number" class="form-control" id="rentalPriceInput" aria-describedby="rentalPriceHelp" placeholder="Enter rental price"
+          [(ngModel)]="titleLogicAppModel.rentalPrice" name="rentalPrice" required>
+        <small id="rentalPriceHelp" class="form-text text-muted">Rental price of the movie.</small>
+      </div>
+    </div>
+  </div>
 
-  <div class="form-group">
-    <label for="idInput">Id</label>
-    <input type="text" class="form-control" id="idInput" aria-describedby="idHelp" placeholder="Enter Id" [(ngModel)]="titleLogicAppModel.uriId"
-      name="uriId" required>
-    <small id="idHelp" class="form-text text-muted">Id of the movie.</small>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <div class="form-group">
+        <label for="titleSortInput">Title</label>
+        <input type="text" class="form-control" id="titleSortInput" aria-describedby="titleHelp" placeholder="Enter title"
+          [(ngModel)]="titleLogicAppModel.titleSort" name="titleSort" required>
+        <small id="titleHelp" class="form-text text-muted">Title of the movie.</small>
+      </div>
+    </div>
+    <div class="form-group col-md-6">
+      <div class="form-group">
+        <label for="yearInput">Year</label>
+        <input type="number" class="form-control" id="yearInput" aria-describedby="yearHelp" placeholder="Enter year of production"
+          [(ngModel)]="titleLogicAppModel.year" name="year" required>
+        <small id="summaryHelp" class="form-text text-muted">Year of production.</small>
+      </div>
+    </div>
   </div>
 
 
-  <div class="form-group">
-    <label for="purchasePriceInput">Purchase Price</label>
-    <input type="number" class="form-control" id="purchasePriceInput" aria-describedby="purchasePriceHelp" placeholder="Enter title"
-      [(ngModel)]="titleLogicAppModel.purchasePrice" name="purchasePrice" required>
-    <small id="purchasePriceHelp" class="form-text text-muted">Purchase price of the movie.</small>
-  </div>
-
-  <div class="form-group">
-    <label for="rentalPriceInput">Rental Price</label>
-    <input type="number" class="form-control" id="rentalPriceInput" aria-describedby="rentalPriceHelp" placeholder="Enter rental price"
-      [(ngModel)]="titleLogicAppModel.rentalPrice" name="rentalPrice" required>
-    <small id="rentalPriceHelp" class="form-text text-muted">Rental price of the movie.</small>
-  </div>
-
-  <div class="form-group">
-    <label for="titleSortInput">Title</label>
-    <input type="text" class="form-control" id="titleSortInput" aria-describedby="titleHelp" placeholder="Enter title"
-      [(ngModel)]="titleLogicAppModel.titleSort" name="titleSort" required>
-    <small id="titleHelp" class="form-text text-muted">Title of the movie.</small>
-  </div>
   <div class="form-group">
     <label for="summaryInput">Summary</label>
     <input type="text" class="form-control" id="summaryInput" aria-describedby="summaryHelp" placeholder="Enter summary"
       [(ngModel)]="titleLogicAppModel.summaryLong" name="summaryLong" required>
     <small id="summaryHelp" class="form-text text-muted">Summary of the movie.</small>
   </div>
-  <div class="form-group">
-    <label for="yearInput">Year</label>
-    <input type="number" class="form-control" id="yearInput" aria-describedby="yearHelp" placeholder="Enter year of production"
-      [(ngModel)]="titleLogicAppModel.year" name="year" required>
-    <small id="summaryHelp" class="form-text text-muted">Year of production.</small>
-  </div>
+
   <div class="form-group">
     <label for="thumbnailInput">Thumbnail Url</label>
     <input type="text" class="form-control" id="thumbnailInput" aria-describedby="thumbnailHelp" placeholder="Enter url of thumbnail image"
