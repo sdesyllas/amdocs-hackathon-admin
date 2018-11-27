@@ -18,7 +18,8 @@ export class Title {
         public resolution: string,
         public purchasePrice: number,
         public rentalPrice: number,
-        public uriId: string
+        public uriId: string,
+        public alternateId: string[]
         ) {
    }
 }

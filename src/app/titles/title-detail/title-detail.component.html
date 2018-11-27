@@ -14,12 +14,11 @@
   <a class="list-group-item list-group-item-action flex-column align-items-start movie-item" *ngIf="language=='en'">
     <div class="d-flex w-100 justify-content-between">
       <h4 class="list-group-item-heading">{{ title.titleSort }}</h4>
-
       <small><a (click)="playMovie()" target="_blank"><img src="http://cdn.onlinewebfonts.com/svg/img_404212.png" class="play-image"></a></small>
       <small>{{ title.year }}</small>
-      <small>{{ title.resolution }}</small>
     </div>
     <p class="mb-1">{{ title.summaryLong }}</p>
+    <p class="mb-1">resolution: {{ title.resolution }}</p>
     <img [src]="title.boxCover[0]" alt="{{ title.titleSort }}" class="img-responsive title-image">
   </a>
 
@@ -29,9 +28,10 @@
       <h4 class="list-group-item-heading">{{ title.titleSort_it }}</h4>
       <small><a (click)="playMovie()" target="_blank"><img src="http://cdn.onlinewebfonts.com/svg/img_404212.png" class="play-image"></a></small>
       <small>{{ title.year }}</small>
-      <small>{{ title.resolution }}</small>
+      
     </div>
-    <p class="mb-1">{{ title.summaryLong_it }}</p>
+    <p class="mb-1">{{ title.summaryLong_it.substring(1,100) }}</p>
+    <p class="mb-1">resolution: {{ title.resolution }}</p>
     <img [src]="title.boxCover_it[0]" alt="{{ title.titleSort_it }}" class="img-responsive title-image">
   </a>
 
@@ -41,8 +41,8 @@
       <h4 class="list-group-item-heading">{{ title.titleSort_gr }}</h4>
       <small><a (click)="playMovie()" target="_blank"><img src="http://cdn.onlinewebfonts.com/svg/img_404212.png" class="play-image"></a></small>
       <small>{{ title.year }}</small>
-      <small>{{ title.resolution }}</small>
     </div>
+    <p class="mb-1">resolution: {{ title.resolution }}</p>
     <p class="mb-1">{{ title.summaryLong_gr }}</p>
     <img [src]="title.boxCover_gr[0]" alt="{{ title.titleSort_gr }}" class="img-responsive title-image">
   </a>
