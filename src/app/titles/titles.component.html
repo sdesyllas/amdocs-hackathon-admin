@@ -1,10 +1,15 @@
 <div class="row">
-  <div class="col-xl-5">
+  <div class="col-xl-3">
     <app-title-list #titleList></app-title-list>
   </div>
-  <div class="col-xl-7">
+  <div class="col-xl-5">
     <app-title-detail 
     [title]="titleList.selectedTitle" 
     [showTitleDetails]="titleList.selectedTitle!=null"></app-title-detail>
+  </div>
+  <div class="col-xl-4">
+      <app-title-analytics 
+      [title]="titleList.selectedTitle"
+      [showTitleDetails]="titleList.selectedTitle!=null"></app-title-analytics>
   </div>
 </div>

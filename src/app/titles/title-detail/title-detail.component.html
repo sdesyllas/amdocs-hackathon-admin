@@ -1,5 +1,5 @@
 <div *ngIf="showTitleDetails" class="card sticky-top language-selector">
-
+    
   <div class="form-group language-selector">
     <label for="languagesSelect">Select language</label>
     <select class="form-control" id="languagesSelect" [(ngModel)]="language" name="languages" (change)="onLanguageChange()"
@@ -44,4 +44,6 @@
     <p class="mb-1">{{ title.summaryLong_gr }}</p>
     <img [src]="title.boxCover_gr[0]" alt="{{ title.titleSort_gr }}" class="img-responsive title-image">
   </a>
+
+ 
 </div>

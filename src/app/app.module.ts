@@ -10,6 +10,7 @@ import { TitleDetailComponent } from './titles/title-detail/title-detail.compone
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule }   from '@angular/forms';
 import { CreateTitleComponent } from './titles/title-list/create-title/create-title.component';
+import { TitleAnalyticsComponent } from './titles/title-analytics/title-analytics.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { CreateTitleComponent } from './titles/title-list/create-title/create-ti
     TitleListComponent,
     TitleItemComponent,
     TitleDetailComponent,
-    CreateTitleComponent
+    CreateTitleComponent,
+    TitleAnalyticsComponent
   ],
   imports: [
     BrowserModule,

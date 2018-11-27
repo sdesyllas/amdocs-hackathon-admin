@@ -21,7 +21,13 @@ export class TitleDetailComponent implements OnInit {
   } 
 
   playMovie(): void {
-    this.getResolve();
+    //this.getResolve();
+    window.open('https://www.videoindexer.ai/accounts/f8d93501-2228-4262-a35e-5932597a917a/videos/fb85b33ca2/', "_blank");
+  }
+
+  showSentiment(): void {
+    //this.getResolve();
+    window.open('https://www.videoindexer.ai/embed/player/f8d93501-2228-4262-a35e-5932597a917a/fb85b33ca2/', "_blank");
   }
 
   onLanguageChange(): void {
