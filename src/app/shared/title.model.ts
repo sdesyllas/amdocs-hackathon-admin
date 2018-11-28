@@ -2,6 +2,8 @@ export class Title {
     constructor(
         public titleSort: string, 
         public titleSort_it: string,
+        public titleLong: string,
+        public titleLong_it: string,
         public titleSort_gr: string,
         public summaryLong:  string,
         public summaryLong_it:  string,

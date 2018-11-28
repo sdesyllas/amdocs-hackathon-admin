@@ -1,7 +1,18 @@
-<div class="title-analytics card sticky-top" *ngIf="showTitleDetails">
-  <p>
-    {{ title.titleSort }} metadata
-  </p>
-  <iframe width="500" height="780" [src]="getTrustedUrl()" class="e2e-iframe-trusted-src"
-    frameborder="0" allowfullscreen></iframe>
+<div class="row">
+  <div class="col-xs-12">
+    <p></p>
+    <button class="btn btn-secondary btn-success" (click)="showAnalytics()">Show Analytics</button>
+  </div>
+</div>
+<hr/>
+<div class="row">
+  <div class="col-xs-12">
+    <div class="title-analytics card sticky-top" *ngIf="showTitleDetails && displayAnalytics">
+      <p>
+        {{ title.titleSort }} metadata
+      </p>
+      <iframe width="500" height="780" [src]="getTrustedUrl()" class="e2e-iframe-trusted-src" frameborder="0"
+        allowfullscreen></iframe>
+    </div>
+  </div>
 </div>

@@ -3,7 +3,12 @@
     <h4 class="list-group-item-heading">{{ title.titleSort }}</h4>
     <small>{{ title.year }}</small>
     <small>{{ title.resolution }}</small>
+    
   </div>
   <p class="mb-1">{{ title.summaryLong }}</p>
+  
   <img [src]="title.boxCover[0]" alt="{{ title.titleSort }}" class="img-responsive title-image">
+  <p>
+      <small>{{ title.uriId }}</small>
+  </p>
 </a>

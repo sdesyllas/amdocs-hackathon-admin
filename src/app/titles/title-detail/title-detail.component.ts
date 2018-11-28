@@ -22,8 +22,7 @@ export class TitleDetailComponent implements OnInit {
 
   playMovie(): void {
     //this.getResolve();
-    this.title.alternateId.push("urn:nb:videoindex:fb85b33ca2");
-    let url = this.title.alternateId[2].split(':')[3];
+    var url = this.title.alternateId[this.title.alternateId.length-1].split(':')[3];
     let indexerUrl = "https://www.videoindexer.ai/accounts/f8d93501-2228-4262-a35e-5932597a917a/videos/"+url;
     window.open(indexerUrl, "_blank");
   }

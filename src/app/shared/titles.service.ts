@@ -13,7 +13,7 @@ export class TitlesService {
     }
 
   getTitles (): Observable<Title[]> {
-    return this.http.get<Title[]>('https://azne-ccsearch-q004.search.windows.net/indexes/hack-movie-index/docs?api-version=2017-11-11&api-key=F3ECD68784981D0C3664FF7075B4488F&facet=termsType&facet=resolution');
+    return this.http.get<Title[]>('https://azne-ccsearch-q004.search.windows.net/indexes/hack-movie-index/docs?api-version=2017-11-11&api-key=F3ECD68784981D0C3664FF7075B4488F&$top=999');
   }
   
 }
